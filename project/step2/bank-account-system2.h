@@ -16,7 +16,8 @@ public:
 	bool AddBalance(double balance);
 	const int GetAddress() const;
 	const char *GetName() const;
-	const double GetBalance() const;
+	void ShowInfo() const;
+	~Account();
 };
 
 Account *makeAccount();

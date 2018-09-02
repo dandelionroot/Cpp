@@ -41,9 +41,16 @@ const char *Account::GetName() const
 	return this->name;
 }
 
-const double Account::GetBalance() const
+void Account::ShowInfo() const
 {
-	return this->balance;
+	cout << "계좌주소 : " << this->address << endl;
+	cout << "고객이름 : " << this->name << endl;
+	cout << "계좌잔액 : " << this->balance << endl;
+}
+
+Account::~Account()
+{
+	delete []name;
 }
 
 Account *makeAccount()
@@ -123,8 +130,6 @@ void allPrint() {
 	cout << "**전체 계좌정보 출력**" << endl;
 	for(int i=0; i<accum; i++) {
 		cout << "-" << i+1 << "번째 고객정보" << endl;
-		cout << "계좌주소 : " << pAccount[i]->GetAddress() << endl;
-		cout << "고객이름 : " << pAccount[i]->GetName() << endl;
-		cout << "계좌잔액 : " << pAccount[i]->GetBalance() << endl;
+		pAccount[i]->ShowInfo();
 	}
 }
