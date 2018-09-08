@@ -25,7 +25,7 @@ Account::Account(int address, char *name, double balance)
 	strcpy(this->name, name); // 성함 정보를 char형 배열에 동적할당하여 저장
 }
 
-Account::Account(Account &copy)
+Account::Account(const Account &copy)
 	:address(copy.address), balance(copy.balance)
 {
 	int len = strlen(copy.name) + 1;

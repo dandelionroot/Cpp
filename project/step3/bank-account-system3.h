@@ -13,7 +13,7 @@ private:
 	double balance; // 잔액
 public:
 	Account(int address, char *name, double balance); // 생성자
-	Account(Account &copy);
+	Account(const Account &copy);
 	bool AddBalance(double balance); // 잔액을 balance만큼 더함
 	const int GetAddress() const; // 계좌주소를 얻음
 	const char *GetName() const; // 성함을 얻음
