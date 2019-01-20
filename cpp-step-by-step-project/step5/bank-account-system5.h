@@ -1,7 +1,3 @@
-/*
-	6단계 진행시 Control Class에 const 선언(함수, 인자) 추가할 것
-*/
-
 enum
 {
 	MAKE = 1, DEPOSIT, WITHDRAW, PRINT, EXIT 

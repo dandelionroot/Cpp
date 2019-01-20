@@ -1,29 +1,30 @@
 #include <iostream>
-#include <bank-account-system3.h>
+#include <bank-account-system6.h>
 using std::cin;
 using std::cout;
 using std::endl;
 
 int main(void)
 {
+	AccountHandler handler;
 	int select;
-	while(1) {
-		showMenu();
+	while(true) {
+		handler.showMenu();
 		cout << "선택 : ";
 		cin >> select;
 
 		switch(select) {
 		case MAKE :
-			makeAccount();
+			handler.makeAccount();
 			break;
 		case DEPOSIT :
-			deposit();
+			handler.deposit();
 			break;
 		case WITHDRAW :
-			withdrawal();
+			handler.withdrawal();
 			break;
 		case PRINT :
-			allPrint();
+			handler.allPrint();
 			break;
 		case EXIT :
 			return 0;

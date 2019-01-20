@@ -2,12 +2,12 @@ CC = g++
 CFLAGS = -Wall -g -c
 INCLUDE = -I.
 
-OBJS = bank-account-system5.o main.o
+OBJS = bank-account-system6.o main.o
 
 all : main
 
 %.o : %.cpp
-	$(CC) $(INCLUDE) $(CFLAGS) $&lt;
+	$(CC) $(INCLUDE) $(CFLAGS) $<
 
 main : $(OBJS)
 	$(CC) -o $@ $(OBJS)
